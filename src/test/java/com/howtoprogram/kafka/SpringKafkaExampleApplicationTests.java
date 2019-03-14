@@ -27,8 +27,8 @@ public class SpringKafkaExampleApplicationTests {
 
 	@Test
 	public void contextLoads() throws InterruptedException {
-
-		ListenableFuture<SendResult<String, String>> future = kafkaTemplate.send("topic1", "ABC");
+		//kafka_test03
+		ListenableFuture<SendResult<String, String>> future = kafkaTemplate.send("kafka_test03", "Hello World");
 		future.addCallback(new ListenableFutureCallback<SendResult<String, String>>() {
 			@Override
 			public void onSuccess(SendResult<String, String> result) {
